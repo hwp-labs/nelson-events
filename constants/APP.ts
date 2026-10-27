@@ -4,9 +4,9 @@ export const APP = {
   name: "Nelson's Event Planning Corp",
   shortName: "Nelson's",
   slug: "nelsons-event-planning-corp",
-  title:
-    "Nelson's Event Planning Corp - Premium Event Planning Services in Lithia, FL",
-  description: "Premium Event Planning Services in Lithia, FL",
+  title: "Nelson's Event Planning Corp - Premium Event Planning Services",
+  description:
+    "Premium event planning services in 5839 Heronrise Crescent Drive, Lithia, FL 33547-5884",
   colors: {
     blue: "#014874",
     green: "#72c825",

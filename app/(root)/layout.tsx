@@ -14,7 +14,7 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   metadataBase: new URL(APP.url),
-  title: APP.title,
+  title: APP.name,
   description: APP.description,
   applicationName: APP.name,
   openGraph: {

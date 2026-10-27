@@ -11,7 +11,7 @@ export const Logo = () => {
           Nelson&apos;s
         </span>
         <span className="lg:text-[12px] text-[10px] font-semibold tracking-[0.25em] text-accent uppercase">
-          Event Planning Corp.
+          Event Planning Corp
         </span>
       </div>
     </Link>
