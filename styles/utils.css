@@ -1,0 +1,17 @@
+@layer components {
+  .debug {
+    @apply border border-red-500;
+  }
+
+  .app-container {
+    @apply w-full max-w-[1280px] min-inline-auto;
+  }
+
+  .app-section {
+    @apply min-h-[640px];
+  }
+
+  .app-section-sm {
+    @apply min-h-[480px];
+  }
+}

@@ -1,0 +1,8 @@
+@layer components {
+  .grid-2 {
+    @apply grid grid-cols-2;
+  }
+  .grid-3 {
+    @apply grid grid-cols-3;
+  }
+}
