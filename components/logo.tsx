@@ -5,7 +5,7 @@ import { PATH } from "@/constants/PATH";
 export const Logo = () => {
   return (
     <Link href={PATH.home} className="flex items-center gap-1">
-      <Image src="/icon-512.png" alt="" width={80} height={80} />
+      <Image src="/icon.png" alt="" width={80} height={80} />
       <div className="flex flex-col leading-none">
         <span className="text-3xl font-extrabold tracking-tight text-brand">
           Nelson&apos;s
