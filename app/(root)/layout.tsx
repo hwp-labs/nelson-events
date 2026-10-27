@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     type: "website",
     siteName: APP.name,
     locale: "en_CA",
-    images: [{ url: "/images/hero.jpg", alt: "" }],
+    images: [{ url: "/social-preview.png", alt: "" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/images/hero.jpg"],
+    images: ["/social-preview.png"],
   },
 };
 
