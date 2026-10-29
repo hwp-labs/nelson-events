@@ -14,11 +14,11 @@ export const Hero = () => {
           className="object-cover"
         />
       </div>
-      <div className="[&>p]:mt-4">
-        <p className="text-[22px] leading-[34px]">
+      <div className="[&>p]:mt-4 text-[20px] leading-[32px]">
+        <p>
           <strong>{APP.name}</strong> offers {APP.description}.
         </p>
-        <p className="text-xl leading-[32px]">
+        <p>
           We specialize in creating seamless, thoughtfully executed experiences.
           We work with clients to design and deliver weddings, private
           celebrations, and corporate events that feel cohesive, intentional,

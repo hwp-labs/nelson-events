@@ -2,7 +2,7 @@ export const PATH = {
   nil: "#",
   home: "/",
   about: "/about",
-  services: "/#services",
+  services: "/services",
   contact: "/#contact-us",
 } as const;
 

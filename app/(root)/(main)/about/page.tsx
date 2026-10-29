@@ -3,12 +3,13 @@ import { Banner } from "@/components/molecules/banner";
 import { EventGallery } from "@/components/molecules/event-gallery";
 import { CtaCard } from "@/components/molecules/cta-card";
 import { APP } from "@/constants/APP";
+import { PATH } from "@/constants/PATH";
 //
 import { Hero, OurMission, OurProcess } from "@/components/species/about";
 
 export const metadata: Metadata = {
   title: "About Us",
-  alternates: { canonical: "/about" },
+  alternates: { canonical: PATH.about },
 };
 
 export default function AboutPage() {
