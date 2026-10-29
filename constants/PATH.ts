@@ -3,7 +3,7 @@ export const PATH = {
   home: "/",
   about: "/about",
   services: "/services",
-  contact: "/#contact-us",
+  contact: "/contact-us",
 } as const;
 
 // sitemap

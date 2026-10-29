@@ -1,9 +1,12 @@
+import "@/styles/globals.css";
+// 
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
-import type { ReactNode } from "react";
-import "@/styles/globals.css";
+// 
 import { Header } from "@/components/organisms/header";
 import { Footer } from "@/components/organisms/footer";
+import { ScrollToTop } from "@/components/atoms/scroll-to-top";
 import { APP } from "@/constants/APP";
 
 const nunito = Nunito({
@@ -42,6 +45,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Header />
         <main id="main">{children}</main>
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

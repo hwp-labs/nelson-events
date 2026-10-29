@@ -12,7 +12,7 @@ export function Newsletter() {
   const handleSubmit = async () => {
     if (email.trim().length > 0) {
       setLoading(true);
-      await sleep();
+      await sleep(2);
       setLoading(false);
 
       setLoaded(true);
