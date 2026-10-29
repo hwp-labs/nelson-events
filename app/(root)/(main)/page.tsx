@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <FillImage src="/images/map.png" priority />
+      <FillImage src="/images/hero.jpg" priority />
       <OurServices />
       <HowWeWork />
       <EventGallery />
