@@ -7,7 +7,7 @@ import { Nunito } from "next/font/google";
 import { Header } from "@/components/organisms/header";
 import { Footer } from "@/components/organisms/footer";
 import { ScrollToTop } from "@/components/atoms/scroll-to-top";
-import { APP } from "@/constants/APP";
+import { META } from "@/constants/META";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -15,22 +15,7 @@ const nunito = Nunito({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(APP.url),
-  title: APP.name,
-  description: APP.description,
-  applicationName: APP.name,
-  openGraph: {
-    type: "website",
-    siteName: APP.name,
-    locale: "en_CA",
-    images: [{ url: "/social-preview.png", alt: "" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    images: ["/social-preview.png"],
-  },
-};
+export const metadata: Metadata = META;
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (

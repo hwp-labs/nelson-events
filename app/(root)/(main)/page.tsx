@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { FillImage } from "@/components/atoms/fill-image";
 import { EventGallery } from "@/components/molecules/event-gallery";
 import { CtaCard } from "@/components/molecules/cta-card";
 import { PATH } from "@/constants/PATH";
 //
-import { Hero, OurServices, HowWeWork } from "@/components/species/home";
+import { OurServices, HowWeWork } from "@/components/species/home";
 
 export const metadata: Metadata = {
   alternates: { canonical: PATH.home },
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <Hero />
+      <FillImage src="/images/map.png" priority />
       <OurServices />
       <HowWeWork />
       <EventGallery />
