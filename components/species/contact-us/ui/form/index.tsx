@@ -3,12 +3,11 @@
 import { useActionState } from "react";
 import { CheckCircle2 } from "lucide-react";
 import { submitContact, type ContactState } from "./actions";
-import { BeforeSubmit } from "../before-submit";
 
 const INITIAL_STATE: ContactState = { status: "idle" };
 
 const INPUT =
-  "mt-2 w-full rounded-xl border border-black/15 bg-white px-4 py-3 text-ink placeholder:text-muted/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand aria-[invalid=true]:border-red-600";
+  "mt-2 w-full rounded-xl border border-black/15 bg-white px-4 py-3 text-ink placeholder:text-placeholder focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand aria-[invalid=true]:border-red-600";
 
 export function ContactForm() {
   const [state, formAction, pending] = useActionState(
@@ -30,7 +29,7 @@ export function ContactForm() {
           <p className="mt-1 text-muted">
             We will get back to you as soon as we can.
           </p>
-        </div> 
+        </div>
       </div>
     );
   }
@@ -41,7 +40,7 @@ export function ContactForm() {
   return (
     <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-black/5 sm:p-10 lg:col-span-3">
       <h2 className="text-brand-dark text-2xl font-bold">Send us a message</h2>
-      <p className="mt-2 text-blue-500">Fields marked with * are required.</p>
+      <p className="text-sm text-blue-500">Fields marked with * are required.</p>
       <form action={formAction} noValidate className="mt-8 space-y-6">
         {state.status === "error" ? (
           <p role="alert" className="rounded-xl bg-red-50 p-4 text-red-800">
@@ -52,13 +51,14 @@ export function ContactForm() {
         <div className="grid gap-6 sm:grid-cols-2">
           <div>
             <label htmlFor="name" className="font-semibold">
-              Full name *
+              Full name <span className="text-destructive">*</span>
             </label>
             <input
+              type="text"
               id="name"
               name="name"
-              type="text"
               autoComplete="name"
+              placeholder="Enter your name"
               required
               defaultValue={values?.name}
               aria-invalid={Boolean(errors.name)}
@@ -73,52 +73,32 @@ export function ContactForm() {
           </div>
 
           <div>
-            <label htmlFor="phone" className="font-semibold">
-              Phone
+            <label htmlFor="email" className="font-semibold">
+              Email address <span className="text-destructive">*</span>
             </label>
             <input
-              id="phone"
-              name="phone"
-              type="tel"
-              autoComplete="tel"
-              defaultValue={values?.phone}
-              aria-invalid={Boolean(errors.phone)}
-              aria-describedby={errors.phone ? "phone-error" : undefined}
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              autoComplete="email"
+              required
+              defaultValue={values?.email}
+              aria-invalid={Boolean(errors.email)}
+              aria-describedby={errors.email ? "email-error" : undefined}
               className={INPUT}
             />
-            {errors.phone ? (
-              <p id="phone-error" className="mt-1 text-base text-red-700">
-                {errors.phone}
+            {errors.email ? (
+              <p id="email-error" className="mt-1 text-base text-red-700">
+                {errors.email}
               </p>
             ) : null}
           </div>
         </div>
 
-        <div>
-          <label htmlFor="email" className="font-semibold">
-            Email *
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            autoComplete="email"
-            required
-            defaultValue={values?.email}
-            aria-invalid={Boolean(errors.email)}
-            aria-describedby={errors.email ? "email-error" : undefined}
-            className={INPUT}
-          />
-          {errors.email ? (
-            <p id="email-error" className="mt-1 text-base text-red-700">
-              {errors.email}
-            </p>
-          ) : null}
-        </div>
-
-        <div>
+        <div className="">
           <label htmlFor="message" className="font-semibold">
-            How can we help? *
+            Tell us about your event <span className="text-destructive">*</span>
           </label>
           <textarea
             id="message"
@@ -152,7 +132,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={pending}
-          className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 font-semibold text-white transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-60"
+          className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3 font-semibold text-white transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {pending ? "Sending..." : "Send message"}
         </button>

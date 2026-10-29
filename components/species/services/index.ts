@@ -1,1 +1,1 @@
-export { List } from "./ui/list";
+export { ServiceList } from "./ui/service-list";

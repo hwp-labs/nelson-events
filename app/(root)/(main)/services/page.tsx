@@ -4,7 +4,7 @@ import { EventGallery } from "@/components/molecules/event-gallery";
 import { CtaCard } from "@/components/molecules/cta-card";
 import { PATH } from "@/constants/PATH";
 //
-import { List } from "@/components/species/services";
+import { ServiceList } from "@/components/species/services";
 
 export const metadata: Metadata = {
   title: "Our Services",
@@ -20,7 +20,7 @@ export default function ServicesPage() {
         description="End-to-end event planning, tailored to your vision."
       />
 
-      <List />
+      <ServiceList />
       <EventGallery />
       <CtaCard
         title="Not sure which services you need?"
