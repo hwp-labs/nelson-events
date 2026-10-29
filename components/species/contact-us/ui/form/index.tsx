@@ -40,7 +40,9 @@ export function ContactForm() {
   return (
     <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-black/5 sm:p-10 lg:col-span-3">
       <h2 className="text-brand-dark text-2xl font-bold">Send us a message</h2>
-      <p className="text-sm text-blue-500">Fields marked with * are required.</p>
+      <p className="text-sm text-blue-500">
+        Fields marked with * are required.
+      </p>
       <form action={formAction} noValidate className="mt-8 space-y-6">
         {state.status === "error" ? (
           <p role="alert" className="rounded-xl bg-red-50 p-4 text-red-800">
@@ -98,11 +100,12 @@ export function ContactForm() {
 
         <div className="">
           <label htmlFor="message" className="font-semibold">
-            Tell us about your event <span className="text-destructive">*</span>
+            Message <span className="text-destructive">*</span>
           </label>
           <textarea
             id="message"
             name="message"
+            placeholder="Tell us about your event"
             rows={6}
             required
             defaultValue={values?.message}

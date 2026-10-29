@@ -18,8 +18,8 @@ export default function AboutPage() {
       <Banner current="About Us" title={APP.name} description={APP.title} />
       <Hero />
       <OurMission />
-      <EventGallery />
       <OurProcess />
+      <EventGallery />
       <CtaCard />
     </>
   );
