@@ -53,8 +53,9 @@
 
   /* Semantic tokens used by the components */
   --color-brand: var(--color-blue);
+  --color-brand-card: #E8F1F7;
   --color-accent: var(--color-green);
-  --color-subtext: #888;
+  --color-subtext: #555;
   --color-subtext-dark: #aaa;
   --color-placeholder: #333;
   --font-sans: var(--font-nunito);

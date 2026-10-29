@@ -217,7 +217,7 @@ export default function ServicesPage() {
 
       <CTACard
         title="Not sure which services you need?"
-        text="Book an appointment and we will help you build the right care plan."
+        description="Book a consultation and let us help plan the right event."
       />
     </>
   );

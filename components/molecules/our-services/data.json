@@ -1,0 +1,35 @@
+[
+  {
+    "image": "/images/event-wedding.jpg",
+    "title": "Your Wedding Should Feel Joyful",
+    "description": "Event & Wedding Planning",
+    "details": [
+      "Dedicated planner from the first call to the last dance",
+      "Vendors, venue, and timeline handled for you",
+      "Plans shaped around your story and budget",
+      "Available seven days a week"
+    ]
+  },
+  {
+    "image": "/images/event-party.jpg",
+    "title": "Office Parties You Actually Enjoy",
+    "description": "Corporate Event Planning",
+    "details": [
+      "Venue, catering, and entertainment sorted end to end",
+      "Options for teams of any size and budget",
+      "Inclusive planning so everyone feels welcome",
+      "Smooth setup and cleanup, so you can attend too"
+    ]
+  },
+  {
+    "image": "/images/event-concert.jpg",
+    "title": "Great Concerts with Flawless Planning",
+    "description": "Concert & Live Event Planning",
+    "details": [
+      "Venue, stage, sound, and lighting coordinated",
+      "Ticketing, security, and crowd management covered",
+      "Artist and vendor logistics handled on the day",
+      "Experienced crew on site from load-in to last call"
+    ]
+  }
+]

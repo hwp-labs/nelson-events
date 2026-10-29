@@ -15,7 +15,7 @@ export const IMAGE = {
     AboutUs: (
       <Image
         src="/images/banner-2.jpeg"
-        alt="Residents enjoying time together at home"
+        alt=""
         fill
         sizes="(min-width: 1024px) 50vw, 100vw"
         className="object-cover object-right"

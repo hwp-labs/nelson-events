@@ -1,51 +1,29 @@
-import { APP } from "@/constants/APP";
 import Link from "next/link";
+import { BookAppointmentButton } from "../atoms/book-appointment-button";
+import { APP } from "@/constants/APP";
 
-type Action = { label: string; href: string };
-
-type BannerProps = {
+type Props = {
   title?: string;
-  text?: string;
-  primary?: Action;
-  secondary?: Action;
+  description?: string;
 };
 
-const DEFAULT_PRIMARY: Action = { label: "Book Appointment", href: "/book-appointment" };
-const DEFAULT_SECONDARY: Action = { label: `Call ${APP.tel}`, href: APP.telHref };
-
-function ActionLink({ action, className }: { action: Action; className: string }) {
-  const isNative = action.href.startsWith("mailto:") || action.href.startsWith("tel:");
-  return isNative ? (
-    <a href={action.href} className={className}>
-      {action.label}
-    </a>
-  ) : (
-    <Link href={action.href} className={className}>
-      {action.label}
-    </Link>
-  );
-}
-
 export function CTACard({
-  title = "Ready to talk about care for your loved one?",
-  text = `Our team is available ${APP.workHours}`,
-  primary = DEFAULT_PRIMARY,
-  secondary = DEFAULT_SECONDARY,
-}: BannerProps) {
+  title = "Ready to plan your event?",
+  description = `Our team is available ${APP.workHours}`,
+}: Props) {
   return (
     <section className="mx-auto max-w-7xl px-6 py-16">
       <div className="rounded-[2rem] bg-brand px-8 py-14 text-center text-white sm:px-16">
         <h2 className="text-3xl font-bold sm:text-4xl">{title}</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-white/80">{text}</p>
+        <p className="mx-auto mt-4 max-w-2xl text-white/80">{description}</p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <ActionLink
-            action={primary}
-            className="rounded-full bg-accent px-8 py-4 font-semibold text-white transition hover:brightness-95"
-          />
-          <ActionLink
-            action={secondary}
-            className="rounded-full border-2 border-white px-8 py-4 font-semibold transition hover:bg-white hover:text-brand-dark"
-          />
+          <BookAppointmentButton variant="hero" />
+          <Link
+            href={APP.telHref}
+            className="rounded-full bg-white px-8 py-4 font-semibold text-brand transition"
+          >
+            Call {APP.tel}
+          </Link>
         </div>
       </div>
     </section>

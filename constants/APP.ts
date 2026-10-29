@@ -16,6 +16,6 @@ export const APP = {
   email: `info@${APP_DOMAIN}`,
   tel: "+1 (813) 784-4766",
   telHref: "tel:+18137844766",
-  address: "5839 Heronrise Crescent Drive, Lithia, FL 33547-5884",
+  address: "5839 Heronrise Crescent Drive, Lithos, FL 33547-5884",
   workHours: "Monday to Friday, 9.00 - 17.00",
 } as const;

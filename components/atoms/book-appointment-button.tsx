@@ -20,7 +20,7 @@ export const BookAppointmentButton = ({ variant }: Props) => {
           variant === "hero",
       })}
     >
-      Book Appointment
+      Book Consultation
       {variant === "hero" && <ArrowRight className="size-5" />}
     </Link>
   );
