@@ -308,9 +308,7 @@ export default function PrivacyPolicyPage() {
 
       <CTACard
         title="Questions about your privacy?"
-        text="We are happy to explain how we handle your information."
-        primary={{ label: "Email us", href: `mailto:${PRIVACY_EMAIL}` }}
-        secondary={{ label: "Contact Us", href: "/contact-us" }}
+        description="We are happy to explain how we handle your information."
       />
     </>
   );
