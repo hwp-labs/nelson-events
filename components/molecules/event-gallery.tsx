@@ -49,7 +49,13 @@ export const EventGallery = () => {
               className="basis-full pl-4 sm:basis-1/2 lg:basis-1/4"
             >
               <div className="relative aspect-square overflow-hidden rounded-lg">
-                <Image src={item} alt="" fill className="object-cover" />
+                <Image
+                  src={item}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover"
+                />
               </div>
             </CarouselItem>
           ))}
