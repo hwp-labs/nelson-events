@@ -1,6 +1,4 @@
-import Link from "next/link";
 import { APP } from "@/constants/APP";
-import { PATH } from "@/constants/PATH";
 
 export function Copyright() {
   return (
@@ -9,12 +7,7 @@ export function Copyright() {
         <p>
           &copy; {new Date().getFullYear()} {APP.name}. All rights reserved.
         </p>
-        <Link
-          href={PATH.privacyPolicy}
-          className="hover:text-white hover:underline"
-        >
-          Privacy Policy
-        </Link>
+        <p>Operational since September 30th, 2026</p>
       </div>
     </div>
   );

@@ -20,6 +20,7 @@ import {
 import { Banner } from "@/components/molecules/banner";
 import { CTACard } from "@/components/molecules/cta-card";
 import { IMAGE } from "@/constants/IMAGE";
+import { APP } from "@/constants/APP";
 
 export const metadata: Metadata = {
   title: "About Us - Jamie Home Care",
@@ -89,32 +90,31 @@ const VALUES: ReadonlyArray<Item> = [
 export default function AboutPage() {
   return (
     <>
-      <Banner
-        current="About Us"
-        title="Welcome to Jamie Home Care"
-        description="Care You Can Trust!"
-      />
-
-      {/* Welcome */}
+      <Banner current="About Us" title={APP.name} description={APP.title} />
       <section className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-2">
         <div className="bg-brand-soft relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-lg">
-          {IMAGE.AboutUs}
+          <Image
+            src="/images/hero.jpg"
+            alt=""
+            fill
+            priority
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+          />
         </div>
-        <div>
-          {/* <p className="font-semibold uppercase tracking-wide text-accent">
-            Welcome to Jamie Home Care
+        <div className="text-2xl leading-[40px] [&>p]:mt-6">
+          <p>
+            <strong>{APP.name}</strong> offers {APP.description}.
           </p>
-          <h2 className="mt-3 text-3xl font-bold text-brand-dark sm:text-4xl">
-            Care You Can Trust
-          </h2> */}
-          <p className="text-muted_ mt-6 text-2xl leading-[40px]">
-            At Jamie Home Care, we believe that aging and receiving daily
-            support should never mean giving up independence, comfort, or
-            dignity. Based in the heart of the Kitchener-Waterloo-Cambridge
-            (KWC) region, we provide compassionate, individualized home care
-            services designed to support seniors and individuals with
-            disabilities right where they feel safest: in the comfort of their
-            own homes.
+          <p>
+            We specialize in creating seamless, thoughtfully executed
+            experiences. We work with clients to design and deliver weddings,
+            private celebrations, and corporate events that feel cohesive,
+            intentional, and well-organized from start to finish. With a strong
+            emphasis on structure, personalized service, and attention to
+            detail, our event planning services are designed to guide clients
+            through a clear and stress-free process. Every element is carefully
+            considered to ensure a polished result that reflects your vision.
           </p>
           <Link
             href="/contact-us"

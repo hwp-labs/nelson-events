@@ -1,12 +1,13 @@
 export const APP_DOMAIN = "nelsonseventplanningcorp.com";
+export const APP_ADDRESS =
+  "5839 Heronrise Crescent Drive, Lithia, FL 33547-5884";
 
 export const APP = {
   name: "Nelson's Event Planning Corp",
   shortName: "Nelson's",
   slug: "nelsons-event-planning-corp",
-  title: "Nelson's Event Planning Corp - Premium Event Planning Services",
-  description:
-    "Premium event planning services in 5839 Heronrise Crescent Drive, Lithia, FL 33547-5884",
+  title: "Premium Event Planning Services",
+  description: `Premium event planning services in ${APP_ADDRESS}`,
   colors: {
     blue: "#014874",
     green: "#72c825",
@@ -16,6 +17,7 @@ export const APP = {
   email: `info@${APP_DOMAIN}`,
   tel: "+1 (813) 784-4766",
   telHref: "tel:+18137844766",
-  address: "5839 Heronrise Crescent Drive, Lithos, FL 33547-5884",
-  workHours: "Monday to Friday, 9.00 - 17.00",
+  address: APP_ADDRESS,
+  workHours: "Monday to Friday, 9am - 5pm",
+  weekendHours: "Saturday 10am - 4pm",
 } as const;
