@@ -18,6 +18,6 @@ export const APP = {
   tel: "+1 (813) 784-4766",
   telHref: "tel:+18137844766",
   address: APP_ADDRESS,
-  workHours: "Monday to Friday, 9am - 5pm",
-  weekendHours: "Saturday 10am - 4pm",
+  workHours: "Monday to Friday, 9am - 5pm | Saturday 10am - 4pm",
+  workHoursRichText: "Monday to Friday,<br/>9am - 5pm | Saturday 10am - 4pm",
 } as const;

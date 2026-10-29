@@ -7,7 +7,7 @@ export function Copyright() {
         <p>
           &copy; {new Date().getFullYear()} {APP.name}. All rights reserved.
         </p>
-        <p>Operational since September 30th, 2026</p>
+        <p>Since Sept 30th, 2026</p>
       </div>
     </div>
   );

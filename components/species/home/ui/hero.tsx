@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function Hero() {
+export const Hero = () => {
   return (
     <section className="relative h-[240px] w-full overflow-hidden lg:h-[840px]">
       <Image
@@ -13,4 +13,4 @@ export function Hero() {
       />
     </section>
   );
-}
+};

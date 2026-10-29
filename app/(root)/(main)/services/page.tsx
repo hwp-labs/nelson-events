@@ -13,7 +13,7 @@ import {
   Utensils,
   type LucideIcon,
 } from "lucide-react";
-import { CTACard } from "@/components/molecules/cta-card";
+import { CtaCard } from "@/components/molecules/cta-card";
 import { Banner } from "@/components/molecules/banner";
 
 export const metadata: Metadata = {
@@ -215,7 +215,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <CTACard
+      <CtaCard
         title="Not sure which services you need?"
         description="Book a consultation and let us help plan the right event."
       />

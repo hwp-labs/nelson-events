@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Menu } from "lucide-react";
-import { MENU } from "@/constants/MENU";
 import clsx from "clsx";
-import { BookAppointmentButton } from "../atoms/book-appointment-button";
+import Link from "next/link";
+import { Menu } from "lucide-react";
+import { CtaButton } from "../atoms/cta-button";
+import { usePathname } from "next/navigation";
+import { MENU } from "@/constants/MENU";
 
 export const Drawer = () => {
   const pathname = usePathname();
@@ -31,7 +31,7 @@ export const Drawer = () => {
                 href={item.path}
                 aria-current={isActive ? "page" : undefined}
                 className={clsx(
-                  "block rounded-md px-3 py-2 font-semibold hover:bg-brand-soft",
+                  "hover:bg-brand-soft block rounded-md px-3 py-2 font-semibold",
                   isActive && "text-brand",
                 )}
               >
@@ -41,7 +41,7 @@ export const Drawer = () => {
           );
         })}
         <li>
-          <BookAppointmentButton variant="drawer"/>
+          <CtaButton variant="drawer" />
         </li>
       </ul>
     </details>

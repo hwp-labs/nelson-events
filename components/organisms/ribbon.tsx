@@ -19,8 +19,7 @@ export const Ribbon = () => {
         </div>
         <span className="flex items-center gap-2">
           <Clock className="size-4" />
-          {APP.workHours}&nbsp;|&nbsp; 
-          {APP.weekendHours}
+          {APP.workHours}
         </span>
       </div>
     </div>

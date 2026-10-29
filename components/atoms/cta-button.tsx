@@ -7,7 +7,7 @@ interface Props {
   variant?: "header" | "drawer" | "hero";
 }
 
-export const BookAppointmentButton = ({ variant }: Props) => {
+export const CtaButton = ({ variant }: Props) => {
   return (
     <Link
       href={PATH.contact}

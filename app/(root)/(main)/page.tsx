@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Hero } from "@/components/molecules/hero";
-import { OurServices } from "@/components/molecules/our-services";
-import { HowWeWork } from "@/components/molecules/how-we-work";
 import { EventGallery } from "@/components/molecules/event-gallery";
-import { CTACard } from "@/components/molecules/cta-card";
+import { CtaCard } from "@/components/molecules/cta-card";
+//
+import { Hero, OurServices, HowWeWork } from "@/components/species/home";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -12,11 +11,11 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* <Hero />
+      <Hero />
       <OurServices />
       <HowWeWork />
-      <EventGallery/> */}
-      <CTACard />
+      <EventGallery />
+      <CtaCard />
     </>
   );
 }

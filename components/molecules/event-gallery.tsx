@@ -36,7 +36,7 @@ export const EventGallery = () => {
   }, [api]);
 
   return (
-    <div className="w-full">
+    <section className="w-full">
       <Carousel
         setApi={setApi}
         opts={{ align: "start", slidesToScroll: 1 }}
@@ -71,6 +71,6 @@ export const EventGallery = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };

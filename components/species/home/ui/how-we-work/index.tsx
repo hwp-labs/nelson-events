@@ -1,4 +1,5 @@
 import { SectionHeading } from "@/components/atoms/section-heading";
+// 
 import data from "./data.json";
 
 export const HowWeWork = () => {

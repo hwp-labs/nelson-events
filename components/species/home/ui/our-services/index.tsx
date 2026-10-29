@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRightIcon, CheckCircle2Icon } from "lucide-react";
 import { SectionHeading } from "@/components/atoms/section-heading";
 import { PATH } from "@/constants/PATH";
+// 
 import { Article } from "./article";
-
 import  data from "./data.json";
 
 export const OurServices = () => {
@@ -39,7 +39,7 @@ export const OurServices = () => {
             <ul className="mt-8 space-y-4">
               {item.details.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-1 size-6 shrink-0 text-brand" />
+                  <CheckCircle2Icon className="mt-1 size-6 shrink-0 text-brand" />
                   <span className="text-subtext">{item}</span>
                 </li>
               ))}
@@ -48,7 +48,7 @@ export const OurServices = () => {
               href={PATH.services}
               className="hover:bg-brand-dark mt-8 inline-flex items-center gap-2 rounded-full bg-brand px-8 py-4 font-bold text-white transition"
             >
-              Learn More <ArrowRight className="size-5" />
+              Learn More <ArrowRightIcon className="size-5" />
             </Link>
           </div>
         );

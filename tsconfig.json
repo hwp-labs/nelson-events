@@ -30,6 +30,6 @@
     "**/*.mts",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
-  ],
+, "components/species/about/ui/our-process/data.js"  ],
   "exclude": ["node_modules", "__ignore__"]
 }

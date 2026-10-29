@@ -1,9 +1,8 @@
-import Link from "next/link";
 import { Nav } from "./nav";
 import { Drawer } from "./drawer";
 import { Logo } from "../logo";
 import { Ribbon } from "./ribbon";
-import { BookAppointmentButton } from "../atoms/book-appointment-button";
+import { CtaButton } from "../atoms/cta-button";
 
 export function Header() {
   return (
@@ -15,7 +14,7 @@ export function Header() {
       >
         <Logo />
         <Nav />
-        <BookAppointmentButton variant="header"/>
+        <CtaButton variant="header"/>
         <Drawer />
       </nav>
     </header>
