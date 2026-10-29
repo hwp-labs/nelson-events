@@ -22,7 +22,7 @@ export default function ContactPage() {
         <GetInTouch />
         <ContactForm />
       </section>
-      <FillImage src="/images/map.png" />
+      <FillImage src="/images/map.jpg" />
     </>
   );
 }
