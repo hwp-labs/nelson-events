@@ -13,7 +13,7 @@ const defaultValues: FormDataType = {
 
 const initialValues: FormDataType = MOCK.newsletter.formData
   ? {
-      email: process.env.NEXT_PUBLIC_SMTP_USER!,
+      email: process.env.NEXT_PUBLIC_TEST_EMAIL!,
     }
   : defaultValues;
 
@@ -29,7 +29,7 @@ export function useNewsletter() {
 
   const handleSubmit = async () => {
     if (canSubmit) {
-      await handleSend(
+      handleSend(
         {
           to: formData.email,
           subject: newsletterMail.subject,

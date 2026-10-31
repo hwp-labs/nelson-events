@@ -18,8 +18,9 @@ const defaultValues: FormDataType = {
 const initialValues: FormDataType = MOCK.newsletter.formData
   ? {
       name: "John Doe",
-      email: process.env.NEXT_PUBLIC_SMTP_USER!,
-      message: "Surprise me!",
+      email: process.env.NEXT_PUBLIC_TEST_EMAIL!,
+      message:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, deleniti provident magnam consectetur minima neque quidem repellat iusto nihil laudantium pariatur eveniet ea illum voluptatum ab distinctio minus, maiores at!",
     }
   : defaultValues;
 
@@ -40,11 +41,11 @@ export function useContactForm() {
 
   const handleSubmit = async () => {
     if (canSubmit) {
-      await handleSend(
+      handleSend(
         {
           to: formData.email,
           subject: contactUsMail.subject,
-          body: contactUsMail.body,
+          body: contactUsMail.body(formData),
         },
         () => {
           setFormData(defaultValues);
