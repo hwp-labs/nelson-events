@@ -6,13 +6,18 @@ export function useEmailAction() {
   const [loading, setLoading] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
-  const handleSend = async (payload: NodemailerRequestDto) => {
+  const handleSend = async (
+    payload: NodemailerRequestDto,
+    next?: () => void,
+  ) => {
     setLoading(true);
     await sendEmailAction(payload);
     setLoading(false);
 
+    next?.();
+
     setLoaded(true);
-    await sleep(2);
+    await sleep(1);
     setLoaded(false);
   };
 

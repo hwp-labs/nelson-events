@@ -16,11 +16,16 @@ export function Newsletter() {
   const { loading, loaded, handleSend } = useEmailAction();
 
   const handleSubscribe = async () => {
-    handleSend({
-      to: email,
-      subject: newsletterMail.subject,
-      body: newsletterMail.body,
-    });
+    handleSend(
+      {
+        to: email,
+        subject: newsletterMail.subject,
+        body: newsletterMail.body,
+      },
+      () => {
+        setEmail("");
+      },
+    );
   };
 
   return (

@@ -1,7 +1,7 @@
 import { APP } from "@/constants/APP";
 
 const cover = `<a href="${APP.url}">
-  <img src="${APP.url}/social-preview.png" alt="" width="100%" />
+  <img src="${APP.url}/images/cover.png" alt="" width="100%" />
 </a>`;
 
 const regards = `Warmly,<br/>

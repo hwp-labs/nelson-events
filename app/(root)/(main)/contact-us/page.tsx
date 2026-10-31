@@ -18,11 +18,11 @@ export default function ContactPage() {
         title="Contact Us"
         description="Call, email or send us a message."
       />
-      <section className="hidden mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-5">
+      <section className="hidden_ mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-5">
         <GetInTouch />
         <ContactForm />
       </section>
-      {/* <FillImage src="/images/map.jpg" /> */}
+      <FillImage src="/images/map.jpg" />
     </>
   );
 }
