@@ -15,6 +15,7 @@ export const APP = {
   domain: APP_DOMAIN,
   url: `https://${APP_DOMAIN}`,
   email: `info@${APP_DOMAIN}`,
+  emailCC: `broadcast@${APP_DOMAIN}`,
   mailto: `mailto:info@${APP_DOMAIN}`,
   tel: "+1 (813) 784-4766",
   telHref: "tel:+18137844766",

@@ -18,4 +18,8 @@
   .card-ring-shadow {
     @apply rounded-2xl shadow-sm ring-1 ring-black/5 transition;
   }
+
+  .app-button {
+    @apply inline-flex cursor-pointer items-center justify-center gap-1.5 font-semibold text-white transition hover:brightness-95 disabled:cursor-not-allowed;
+  }
 }

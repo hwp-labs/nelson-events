@@ -2,13 +2,13 @@ import { APP } from "@/constants/APP";
 import { mailUtils } from "./utils";
 
 export const newsletterMail = {
-  subject: `${APP.name} Newsletter`,
+  subject: `Thank You For Subscribing`,
   body: `
 ${mailUtils.cover}
 <p></p>
-Thank you for subscribing to ${APP.name} newsletter. 
+Thank you for subscribing to ${APP.name} Newsletters. 
 <p></p>
-You're now on our list for event planning tips, event checklists, and ideas to make your events run smoothly.
+You are now on our mailing list for event planning tips, event organizer checklists, and ideas to make your events memorable.
 <p></p>
 ${mailUtils.regards}
 `,

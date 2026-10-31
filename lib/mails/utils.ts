@@ -4,11 +4,11 @@ const cover = `<a href="${APP.url}">
   <img src="${APP.url}/images/cover.png" alt="" width="100%" />
 </a>`;
 
-const regards = `Warmly,<br/>
-${APP.name}<br/>
+const regards = `Regards,<br/>
 <a href="${APP.url}">
   <img src="${APP.url}/icon.png" alt="" width="48" />
-</a>`;
+</a><br/>
+${APP.name}`;
 
 export const mailUtils = {
   cover,

@@ -34,7 +34,7 @@ transporter
 export async function sendEmailAction(
   args: NodemailerRequestDto,
 ): Promise<NodemailerResponseDto> {
-  const to = args.incognito ? APP.email : args.to;
+  const to = args.incognito ? APP.emailCC : args.to;
   const bcc = args.incognito ? args.to : process.env.SMTP_USER_BCC;
 
   try {

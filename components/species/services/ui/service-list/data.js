@@ -1,13 +1,15 @@
-import {HeartIcon,
-BriefcaseIcon,
-PartyPopperIcon,
-MusicIcon,
-MapPinIcon,
-UtensilsCrossedIcon,
-PaletteIcon,
-MicIcon,
-CalendarCheckIcon,
-ClipboardListIcon,} from "lucide-react"
+import {
+  HeartIcon,
+  BriefcaseIcon,
+  PartyPopperIcon,
+  MusicIcon,
+  MapPinIcon,
+  UtensilsCrossedIcon,
+  PaletteIcon,
+  MicIcon,
+  CalendarCheckIcon,
+  ClipboardListIcon,
+} from "lucide-react";
 
 export const data = [
   {
