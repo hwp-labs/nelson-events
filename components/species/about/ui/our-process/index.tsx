@@ -11,10 +11,7 @@ export const OurProcess = () => {
       </div>
       <div className="mt-10 grid gap-6 md:grid-cols-2">
         {data.map(({ Icon, ...item }, i) => (
-          <article
-            key={i}
-            className="flex gap-5 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-black/5"
-          >
+          <article key={i} className="card-ring-shadow flex gap-5 bg-white p-8">
             <span className="bg-brand-soft flex size-14 shrink-0 items-center justify-center rounded-full">
               <Icon className="size-7 text-brand" aria-hidden />
             </span>

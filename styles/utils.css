@@ -14,4 +14,8 @@
   .app-section-sm {
     @apply min-h-[480px];
   }
+
+  .card-ring-shadow {
+    @apply rounded-2xl shadow-sm ring-1 ring-black/5 transition;
+  }
 }

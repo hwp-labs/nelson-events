@@ -1,25 +1,26 @@
 "use client";
 
+import clsx from "clsx";
 import { useState } from "react";
 import { SpinnerBuffer } from "@/components/shadcn/ui/spinner";
-import { sleep } from "@/utils";
+import { useEmailAction } from "@/hooks/use-email-action";
+import { newsletterMail } from "@/lib/mails/newsletter-mail";
+import { MOCK } from "@/constants/MOCK";
+
+const defaultValues = MOCK.newsletter.formData
+  ? { email: "dehphantom@yahoo.com" }
+  : { email: "" };
 
 export function Newsletter() {
-  const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [loaded, setLoaded] = useState(false);
+  const [email, setEmail] = useState(defaultValues.email);
+  const { loading, loaded, handleSend } = useEmailAction();
 
-  const handleSubmit = async () => {
-    if (email.trim().length > 0) {
-      setLoading(true);
-      await sleep(2);
-      setLoading(false);
-
-      setLoaded(true);
-      await sleep(2);
-      setLoaded(false);
-      setEmail("");
-    }
+  const handleSubscribe = async () => {
+    handleSend({
+      to: email,
+      subject: newsletterMail.subject,
+      body: newsletterMail.body,
+    });
   };
 
   return (
@@ -43,8 +44,11 @@ export function Newsletter() {
         />
         <button
           type="button"
-          onClick={handleSubmit}
-          className="flex cursor-pointer items-center gap-1 rounded-r-sm bg-accent px-6 py-3 font-bold"
+          onClick={handleSubscribe}
+          className={clsx(
+            "flex cursor-pointer items-center gap-1 rounded-r-sm px-6 py-3 font-bold",
+            loading ? "bg-brand" : "bg-accent",
+          )}
         >
           {loading && <SpinnerBuffer strokeWidth={3} />}
           {loaded ? "Subscribed!" : "Subscribe"}

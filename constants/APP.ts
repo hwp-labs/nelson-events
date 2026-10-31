@@ -4,8 +4,8 @@ export const APP_ADDRESS =
 
 export const APP = {
   name: "Nelson's Event Planning Corp",
-  shortName: "Nelson's",
-  slug: "nelsons-event-planning-corp",
+  shortName: "Nelson Events",
+  slug: "nelson-events",
   title: "Premium Event Planning Services",
   description: `Premium event planning services in ${APP_ADDRESS}`,
   colors: {

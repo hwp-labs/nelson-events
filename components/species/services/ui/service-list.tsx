@@ -7,7 +7,7 @@ export const ServiceList = () => {
         {data.map(({ Icon, ...item }, i) => (
           <article
             key={i}
-            className="flex gap-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-black/5 transition hover:border-brand hover:bg-brand-card"
+            className="card-ring-shadow flex gap-6 bg-white p-8 hover:bg-brand-card"
           >
             <span className="flex size-14 shrink-0 items-center justify-center rounded-xl bg-brand text-white">
               <Icon className="size-7" aria-hidden />

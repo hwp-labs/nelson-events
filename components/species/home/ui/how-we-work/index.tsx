@@ -1,5 +1,5 @@
 import { SectionHeading } from "@/components/atoms/section-heading";
-// 
+//
 import data from "./data.json";
 
 export const HowWeWork = () => {
@@ -11,11 +11,11 @@ export const HowWeWork = () => {
           {data.map((item, i) => (
             <li
               key={i}
-              className="rounded-2xl bg-brand-card p-8 text-center shadow-sm"
+              className="card-ring-shadow bg-brand-card p-8 text-center"
             >
-              <span className="mx-auto flex size-14 items-center justify-center rounded-full bg-accent text-2xl font-extrabold text-white">
+              <div className="mx-auto flex size-14 items-center justify-center rounded-full bg-accent text-2xl font-extrabold text-white">
                 {i + 1}
-              </span>
+              </div>
               <h3 className="mt-5 text-xl font-bold">{item.title}</h3>
               <p className="mt-2 text-subtext">{item.description}</p>
             </li>

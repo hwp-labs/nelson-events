@@ -12,14 +12,14 @@
 ## Setup
 
 ```sh
-git clone https://github.com/hwp-labs/nelsons-event-planning.git
-cd nelsons-event-planning
+git clone https://github.com/hwp-labs/nelson-events.git
+cd nelson-events
 
 pnpm install
 pnpm run dev
 
-# - Local:  http://localhost:3000
-# - Live:   https://nelsonseventplanningcorp.com
+# Local:  http://localhost:3000
+# Live:   https://nelsonseventplanningcorp.com
 ```
 
 ## Resources

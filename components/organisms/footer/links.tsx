@@ -3,7 +3,7 @@ import { MENU_FOOTER } from "@/constants/MENU";
 
 export function FooterLinks() {
   return (
-    <div className="debug_ mx-auto">
+    <div className="debug_ lg:mx-auto">
         <h4 className="text-lg font-bold">Helpful links</h4>
         <ul className="mt-4 space-y-2">
           {MENU_FOOTER.map((item, i) => (

@@ -32,10 +32,7 @@ export const GetInTouch = () => {
     <div className="lg:col-span-2">
       <ul className="space-y-6">
         {data.map(({ Icon, ...item }, i) => (
-          <li
-            key={i}
-            className="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5"
-          >
+          <li key={i} className="flex items-start gap-4 bg-white p-5 card-ring-shadow">
             <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-brand text-white">
               <Icon className="size-6" aria-hidden />
             </span>

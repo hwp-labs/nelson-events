@@ -38,7 +38,7 @@ export function ContactForm() {
   const values = state.status === "error" ? state.values : undefined;
 
   return (
-    <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-black/5 sm:p-10 lg:col-span-3">
+    <div className="card-ring-shadow bg-white p-8 sm:p-10 lg:col-span-3">
       <h2 className="text-brand-dark text-2xl font-bold">Send us a message</h2>
       <p className="text-sm text-blue-500">
         Fields marked with * are required.
